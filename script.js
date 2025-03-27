@@ -44,17 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
     typeLine();
   }
 
-  // Dark mode toggle
+  // Working dark mode toggle
   const toggle = document.getElementById("toggle-theme");
   if (toggle) {
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
     });
   }
-
-  // Remove splash after delay
-  setTimeout(() => {
-    const splash = document.getElementById("splash");
-    if (splash) splash.remove();
-  }, 4000);
 });
