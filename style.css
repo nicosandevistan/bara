@@ -164,3 +164,16 @@ h1, h2, h3, h4, nav a {
     font-family: 'Orbitron', sans-serif;
 }
 
+
+/* Animated DNA Path */
+.dna-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawDNA 4s ease-out forwards infinite;
+}
+
+@keyframes drawDNA {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
