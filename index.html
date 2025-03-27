@@ -1,44 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BARA | Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BARA | Home</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>BARA</h1>
-    <h3>Biological Automated Recombinase Architect</h3>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="progress.html">Progress</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="fade-in">
-    <section class="hero typing">
-      <h2>Welcome to BARA</h2>
-      <p>BARA is a predictive modeling tool designed to help synthetic biologists identify the function of genetic circuits using AI and public datasets.</p>
-    </section>
-    <div class="buttons">
-      <a href="how-it-works.html" class="btn pulse">Learn How It Works</a>
-      <a href="progress.html" class="btn pulse">See Our Progress</a>
-    </div>
-    <section class="console-preview">
-      <h3>Try It</h3>
-      <div class="console">
-        <div class="line">> Design a circuit with input A, B and output C</div>
-        <div class="line typing-output">> Predicting...</div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>Created by Nicolas Rojas Taborda | Contact: <a href="mailto:barainitiative@gmail.com">barainitiative@gmail.com</a></p>
-  </footer>
-  <script src="script.js"></script>
+    <header>
+        <h1>BARA</h1>
+        <h3>Biological Automated Recombinase Architect</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Welcome to BARA</h2>
+            <p>BARA is a predictive modeling tool designed to help synthetic biologists identify the function of genetic circuits using AI and public datasets.</p>
+            <div class="button-group">
+                <a href="how-it-works.html" class="button">Learn How It Works</a>
+                <a href="progress.html" class="button">See Our Progress</a>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h3>Imagine Typing This</h3>
+            <div class="terminal">
+                <p><span class="prompt">&gt;</span> Design a circuit that activates GFP only when arabinose is present and IPTG is absent.</p>
+                <p><span class="prompt">&gt;</span> Parsing genetic logic...</p>
+                <p><span class="prompt">&gt;</span> Coding sequence output: NOT-AND gate using araC and lacI regulation. Output: GFP expression.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Created by Nicolas Rojas Taborda | Contact: <a href="mailto:barainitiative@gmail.com">barainitiative@gmail.com</a></p>
+    </footer>
 </body>
 </html>
