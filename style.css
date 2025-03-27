@@ -165,3 +165,24 @@ h1, h2, h3, h4, nav a {
 }
 
 
+
+
+.how-bara-works {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 1.5em;
+    background: #111;
+    border-left: 4px solid #0f0;
+    box-shadow: 0 0 8px #0f0;
+    border-radius: 10px;
+    color: #eee;
+}
+.how-bara-works h2 {
+    font-size: 1.8em;
+    color: #0f0;
+    margin-bottom: 0.5em;
+}
+.how-bara-works p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
