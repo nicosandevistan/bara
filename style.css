@@ -123,3 +123,46 @@ footer {
         transform: translateY(0);
     }
 }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4em 0.6em;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #f5f58d;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+    left: 0;
+    background: #f5f58d;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f5f58d;
+}
