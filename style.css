@@ -1,6 +1,10 @@
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap');
+
+font-family: 'Inter', sans-serif;
+
     margin: 0;
     padding: 0;
     background-color: #fdfdfd;
@@ -158,4 +162,8 @@ nav a, nav a:visited, nav a:hover, nav a.active {
 }
 nav a:hover, nav a.active {
     color: #f5f58d;
+}
+
+h1, h2, h3, h4, nav a {
+    font-family: 'Space Grotesk', sans-serif;
 }
