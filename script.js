@@ -47,19 +47,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-function simulateBARA() {
-    const input = document.getElementById('userPrompt').value.trim();
-    const output = document.getElementById('baraOutput');
-    if (!input) {
-        output.textContent = "⚠️ Please enter a prompt.";
-        return;
-    }
-    output.textContent = "> Parsing prompt...
-> Generating response...";
-    setTimeout(() => {
-        output.textContent = `> User Input: ${input}
-> BARA Output: Simulated circuit generated using logic gates.
-> Output: GFP expression logic synthesized.`;
-    }, 1500);
-}
