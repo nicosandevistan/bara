@@ -54,7 +54,31 @@
         This system could eventually empower synthetic biologists to go from "What do I want this cell to do?" to "Here's how to build it" — automatically.
     </p>
 </section>
+
+<section class="modeling-methods">
+    <h2>Modeling Methods</h2>
+    <p>
+        BARA begins by parsing genetic circuits from open databases like the iGEM Registry and SynBioHub.
+        Each circuit is broken down into standardized biological parts (e.g., promoters, RBS, CDS, terminators), 
+        which are then converted into computational feature sets.
+    </p>
+    <p>
+        Our early modeling pipeline will leverage interpretable machine learning tools like 
+        <strong>Random Forests</strong> and <strong>XGBoost</strong> to classify circuit behavior based on structure.
+        These provide a foundation for understanding which circuit components influence specific functions.
+    </p>
+    <p>
+        As we scale, we plan to adopt <strong>Graph Neural Networks (GNNs)</strong> to represent circuits as directed graphs 
+        and capture more complex interactions between genetic elements. We are also exploring 
+        <strong>neuro-symbolic models</strong> to blend logical gate inference with deep learning.
+    </p>
+    <p>
+        Our long-term vision is to invert this pipeline — using learned models to <strong>generate circuits from desired behaviors</strong>, 
+        enabling fully AI-assisted synthetic biology design.
+    </p>
+</section>
 </main>
+
     <footer>
         <p>Created by Nicolas Rojas Taborda | Contact: <a href="mailto:barainitiative@gmail.com">barainitiative@gmail.com</a></p>
     </footer>

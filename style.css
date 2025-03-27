@@ -186,3 +186,24 @@ h1, h2, h3, h4, nav a {
     line-height: 1.6;
     margin-bottom: 1em;
 }
+
+
+.modeling-methods {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 1.5em;
+    background: #111;
+    border-left: 4px solid #5ce1e6;
+    box-shadow: 0 0 8px #5ce1e6;
+    border-radius: 10px;
+    color: #eee;
+}
+.modeling-methods h2 {
+    font-size: 1.8em;
+    color: #5ce1e6;
+    margin-bottom: 0.5em;
+}
+.modeling-methods p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
