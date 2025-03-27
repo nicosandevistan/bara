@@ -42,3 +42,17 @@ if (terminal) {
     }
     typeLine();
 }
+
+// Remove splash after animation
+setTimeout(() => {
+  const splash = document.getElementById('splash');
+  if (splash) splash.remove();
+}, 4000);
+
+// Toggle dark mode
+const toggle = document.getElementById("toggle-theme");
+if (toggle) {
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
+}
