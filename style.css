@@ -45,8 +45,8 @@ main {
     justify-content: center;
     text-align: center;
     margin-bottom: 4em;
-    padding: 3em 1em;
-    min-height: 60vh;
+    padding: 2em 1em;
+    min-height: 50vh;
 }
 
 .button-group {
@@ -132,4 +132,33 @@ h1, h2, h3, nav a {
     box-shadow: 0 0 8px #05ffa1;
     border-radius: 10px;
     color: #d0fdf3;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro > * {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.intro h2 {
+    animation-delay: 0.1s;
+}
+
+.intro p {
+    animation-delay: 0.3s;
+}
+
+.button-group {
+    animation-delay: 0.5s;
 }
