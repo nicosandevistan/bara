@@ -4,15 +4,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0a0a0a;
-    color: #d1fcd3;
+    color: #d0fdf3;
 }
 
 header {
     background-color: #111;
-    color: #0f0;
+    color: #00f7c3;
     padding: 1em;
     text-align: center;
-    box-shadow: 0 0 8px #0f0;
+    box-shadow: 0 0 8px #00f7c3;
 }
 
 nav ul {
@@ -24,14 +24,14 @@ nav ul {
 }
 
 nav a {
-    color: #0f0;
+    color: #00f7c3;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav a:hover, nav a.active {
-    color: #2aff80;
+    color: #05ffa1;
 }
 
 main {
@@ -49,8 +49,8 @@ main {
 
 .button {
     background-color: transparent;
-    border: 1px solid #0f0;
-    color: #0f0;
+    border: 1px solid #00f7c3;
+    color: #00f7c3;
     padding: 0.75em 1.5em;
     margin: 0.5em;
     text-decoration: none;
@@ -59,34 +59,34 @@ main {
 }
 
 .button:hover {
-    background-color: #0f0;
+    background-color: #00f7c3;
     color: #000;
 }
 
 .demo {
     background-color: #000;
-    color: #0f0;
+    color: #00f7c3;
     padding: 1em;
     border-radius: 8px;
     width: 90%;
     max-width: 720px;
     margin: 2em auto;
     font-family: monospace;
-    box-shadow: 0 0 12px #0f0;
+    box-shadow: 0 0 12px #00f7c3;
 }
 
 .prompt {
-    color: #2aff80;
+    color: #05ffa1;
     font-weight: bold;
 }
 
 footer {
     background-color: #111;
-    color: #0f0;
+    color: #00f7c3;
     text-align: center;
     padding: 1em;
     margin-top: 4em;
-    box-shadow: 0 0 6px #0f0;
+    box-shadow: 0 0 6px #00f7c3;
 }
 
 h1, h2, h3, nav a {
@@ -94,82 +94,9 @@ h1, h2, h3, nav a {
     text-transform: uppercase;
 }
 
-.fade-in {
-    animation: fadeIn 1.2s ease-out forwards;
-}
-
-.slide-up {
-    animation: slideUp 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideUp {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.terminal {
-    animation: flicker 2s infinite alternate;
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.95; }
-    100% { opacity: 1; }
-}
-
-.how-bara-works, .modeling-methods {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 1.5em;
-    background: #121212;
-    border-left: 4px solid #2aff80;
-    box-shadow: 0 0 8px #2aff80;
-    border-radius: 10px;
-    color: #d1fcd3;
-}
-
-
-.faq-section {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 1em;
-}
-
-.faq-item {
-    margin-bottom: 1em;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 0 8px #0f0;
-}
-
 .faq-question {
-    width: 100%;
-    padding: 1em;
     background-color: #101010;
-    color: #0f0;
-    border: none;
-    text-align: left;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+    color: #00f7c3;
 }
 
 .faq-question:hover {
@@ -177,11 +104,22 @@ h1, h2, h3, nav a {
 }
 
 .faq-answer {
-    display: none;
-    padding: 1em;
-    background-color: #000;
-    border-left: 3px solid #2aff80;
-    color: #c6ffc4;
-    font-family: monospace;
-    box-shadow: inset 0 0 5px #0f0;
+    border-left: 3px solid #05ffa1;
+    color: #d0fdf3;
+    box-shadow: inset 0 0 5px #00f7c3;
+}
+
+.faq-item {
+    box-shadow: 0 0 8px #00f7c3;
+}
+
+.how-bara-works, .modeling-methods {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 1.5em;
+    background: #121212;
+    border-left: 4px solid #05ffa1;
+    box-shadow: 0 0 8px #05ffa1;
+    border-radius: 10px;
+    color: #d0fdf3;
 }
