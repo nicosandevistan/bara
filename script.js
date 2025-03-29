@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!hasSeenLoader) {
     const funnyMessages = [
-      "$ loading smart DNA stuff...",
-      "$ convincing cells to cooperate...",
-      "$ bribing proteins with ATP...",
-      "$ asking bacteria for permission...",
-      "$ teaching DNA to behave..."
+      "$ probably doing something important...",
+      "$ contacting the central dogma...",
+      "$ pretending we know what we’re doing...",
+      "$ performing science wizardry...",
+      "$ checking gene vibes...",
+      "$ bribing transcription machinery...",
+      "$ adjusting pipette volume...",
+      "$ threatening misbehaving base pairs...",
+      "$ autoclaving instant ramen..."
     ];
 
     const messageElement = document.getElementById('loading-message');
