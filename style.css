@@ -198,6 +198,17 @@ footer a:hover {
   margin: 2em auto;
 }
 
+/* Remove BARA label */
+.faq-label {
+  display: none;
+}
+
+/* Make FAQ heading match the cyan color */
+.faq-section h2, 
+section h2 {
+  color: var(--bara-primary);
+}
+
 .faq-card {
   border: 1px solid var(--bara-primary);
   border-radius: 12px;
