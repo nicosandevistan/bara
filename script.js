@@ -11,17 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "$ teaching DNA to behave..."
     ];
 
-    let messageIndex = 0;
     const messageElement = document.getElementById('loading-message');
-
-    const messageInterval = setInterval(() => {
-      if (messageIndex < funnyMessages.length) {
-        messageElement.innerHTML = funnyMessages[messageIndex];
-        messageIndex++;
-      } else {
-        clearInterval(messageInterval);
-      }
-    }, 800);
+    const randomIndex = Math.floor(Math.random() * funnyMessages.length);
+    messageElement.innerHTML = funnyMessages[randomIndex];
 
     setTimeout(() => {
       if (loaderElement) {
@@ -37,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       sessionStorage.setItem('seenLoader', 'true');
-    }, 4500);
+    }, 3500);
 
   } else {
     if (loaderElement) {
