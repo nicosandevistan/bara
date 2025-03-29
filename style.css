@@ -576,3 +576,8 @@ section h2 {
   color: var(--bara-primary);
   font-weight: bold;
 }
+
+/* Reduce bottom margin on About section */
+.about-content {
+  margin-bottom: 0.5em;
+}
