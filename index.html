@@ -1,26 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BARA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BARA | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>BARA</h1>
-        <p>Biological Automated Recombinase Architect</p>
+        <h3>Biological Automated Recombinase Architect</h3>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/how-it-works.html">How It Works</a>
-            <a href="pages/progress.html">Progress</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/faq.html">FAQ</a>
-            <a href="pages/circuit-designer.html">Circuit Designer</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+</ul>
         </nav>
-    </header>
-    <main>
-        <p>This is the Index page.</p>
+    
+</header>
+    <main class="fade-in slide-up">
+        
+<section class="intro">
+            <h2>Welcome to BARA</h2>
+            <p>BARA is a predictive modeling tool designed to help synthetic biologists identify the function of genetic circuits using AI and public datasets.</p>
+            <div class="button-group">
+                <a href="how-it-works.html" class="button">Learn How It Works</a>
+                <a href="progress.html" class="button">See Our Progress</a>
+            </div>
+        </section>
+
+        <h3>Imagine This:</h3>
+        <section class="demo">
+            <div class="terminal">
+                <p><span class="prompt">&gt;</span> User Input: Design a circuit that activates GFP only when arabinose is present and IPTG is absent.</p>
+                <p><span class="prompt">&gt;</span> BARA Output: Coding sequence for a NOT–AND gate using araC and lacI regulation. Output: GFP expression.</p>
+            </div>
+        </section>
     </main>
+    <footer>
+        <p>Created by Nicolas Rojas Taborda | Contact: <a href="mailto:barainitiative@gmail.com">barainitiative@gmail.com</a></p>
+    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
