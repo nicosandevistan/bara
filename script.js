@@ -1,18 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hasSeenLoader = sessionStorage.getItem('seenLoader');
+  const loaderElement = document.querySelector('.loader-wrapper');
 
   if (!hasSeenLoader) {
-    // First visit in session: show loader
+    const funnyMessages = [
+      "$ loading smart DNA stuff...",
+      "$ convincing cells to cooperate...",
+      "$ bribing proteins with ATP...",
+      "$ asking bacteria for permission...",
+      "$ teaching DNA to behave..."
+    ];
+
+    let messageIndex = 0;
+    const messageElement = document.getElementById('loading-message');
+
+    const messageInterval = setInterval(() => {
+      if (messageIndex < funnyMessages.length) {
+        messageElement.innerHTML = funnyMessages[messageIndex];
+        messageIndex++;
+      } else {
+        clearInterval(messageInterval);
+      }
+    }, 800);
+
     setTimeout(() => {
-      const loader = document.querySelector('.loader-wrapper');
-      if (loader) loader.classList.add('loader-hidden');
-    }, 3500);
-    sessionStorage.setItem('seenLoader', 'true');
+      if (loaderElement) {
+        loaderElement.classList.add('loader-hidden');
+
+        loaderElement.addEventListener('transitionend', () => {
+          loaderElement.style.display = 'none';
+        });
+
+        setTimeout(() => {
+          loaderElement.style.display = 'none';
+        }, 650);
+      }
+
+      sessionStorage.setItem('seenLoader', 'true');
+    }, 4500);
+
   } else {
-    // Skip loader
-    const loader = document.querySelector('.loader-wrapper');
-    if (loader) loader.classList.add('loader-hidden');
+    if (loaderElement) {
+      loaderElement.classList.add('loader-hidden');
+      setTimeout(() => {
+        loaderElement.style.display = 'none';
+      }, 50);
+    }
   }
+
+  // FAQ Toggle Logic
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.faq-card');
+      card.classList.toggle('open');
+    });
+  });
 
   // Content scroll animation
   const observer = new IntersectionObserver((entries) => {
@@ -26,13 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section').forEach(section => {
     section.classList.add('content-transition');
     observer.observe(section);
-  });
-
-  // FAQ Toggle Logic
-  document.querySelectorAll('.faq-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.faq-card');
-      card.classList.toggle('open');
-    });
   });
 });
