@@ -320,3 +320,229 @@ section h2 {
     min-height: 30vh;
   }
 }
+
+/* Additional Animation Effects for BARA
+ * Add this to your style.css file
+ */
+
+/* DNA Helix Background Animation for Hero Sections */
+.dna-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.dna-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 50%, rgba(0, 247, 195, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 50%, rgba(0, 247, 195, 0.05) 1px, transparent 1px);
+  background-size: 40px 15px;
+  opacity: 0.3;
+  z-index: -1;
+  animation: dnaMove 30s linear infinite;
+}
+
+@keyframes dnaMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Circuit Path Animation */
+.circuit-path {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.circuit-line {
+  stroke: var(--bara-primary);
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 5;
+  stroke-dashoffset: 1000;
+  animation: circuitDraw 10s linear infinite;
+}
+
+.circuit-dot {
+  fill: var(--bara-primary);
+  r: 3;
+  opacity: 0;
+  animation: circuitPulse 4s ease-in-out infinite;
+}
+
+@keyframes circuitDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circuitPulse {
+  0%, 100% {
+    opacity: 0;
+    r: 2;
+  }
+  50% {
+    opacity: 1;
+    r: 4;
+  }
+}
+
+/* Terminal Typing Effect */
+.terminal-text {
+  border-right: 2px solid var(--bara-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--bara-primary) }
+}
+
+/* Glitch Effect for Tech Headings */
+.glitch-text {
+  position: relative;
+  animation: glitch 5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bara-dark);
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--bara-primary);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--bara-primary);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(86px, 9999px, 14px, 0);
+  }
+  5% {
+    clip: rect(78px, 9999px, 45px, 0);
+  }
+  10% {
+    clip: rect(23px, 9999px, 11px, 0);
+  }
+  100% {
+    clip: rect(67px, 9999px, 30px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(17px, 9999px, 93px, 0);
+  }
+  5% {
+    clip: rect(52px, 9999px, 109px, 0);
+  }
+  10% {
+    clip: rect(81px, 9999px, 32px, 0);
+  }
+  100% {
+    clip: rect(40px, 9999px, 73px, 0);
+  }
+}
+
+/* Data Stream Effect */
+.data-stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    transparent 0%,
+    rgba(0, 247, 195, 0.05) 50%,
+    transparent 100%);
+  background-size: 100% 20px;
+  z-index: -1;
+  opacity: 0.2;
+  animation: dataStream 10s linear infinite;
+}
+
+@keyframes dataStream {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1000px;
+  }
+}
+
+/* Hover Effects for Buttons and Cards */
+.glow-on-hover {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-on-hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 247, 195, 0.4) 0%, 
+    rgba(0, 247, 195, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  transform: scale(0.9);
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+  transform: scale(1.5);
+}
