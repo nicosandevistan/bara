@@ -20,11 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomIndex = Math.floor(Math.random() * funnyMessages.length);
     const selectedMessage = funnyMessages[randomIndex];
 
+    messageElement.style.animation = 'none';
+    messageElement.style.width = 'auto';
     messageElement.innerHTML = selectedMessage;
+    void messageElement.offsetWidth;
 
     setTimeout(() => {
-      const textWidth = messageElement.offsetWidth + 40;
-      terminalElement.style.width = Math.max(300, textWidth) + 'px';
+      const textLength = selectedMessage.length;
+      const calculatedWidth = Math.max(300, textLength * 10 + 60);
+      terminalElement.style.width = calculatedWidth + 'px';
+
+      messageElement.style.animation = "typing 3s steps(40, end), blink-caret 0.75s step-end infinite";
     }, 50);
 
     setTimeout(() => {
