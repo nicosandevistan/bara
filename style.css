@@ -1,4 +1,50 @@
+:root {
+  --bara-primary: #00f7c3;
+  --bara-primary-hover: #05ffa1;
+  --bara-text: #b8fff3;
+  --bara-dark: #0a0a0a;
+  --bara-dark-lighter: #111;
+  --bara-accent: #c8fff4;
+}
 
+/* Then update your header styles to use the variables */
+header {
+  background-color: var(--bara-dark-lighter);
+  padding: 2em 0 1em 0;
+  text-align: center;
+  border-bottom: 2px solid var(--bara-primary);
+  box-shadow: 0 4px 12px rgba(0, 255, 170, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--bara-accent);
+  font-family: 'Orbitron', sans-serif;
+}
+
+header h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.5em 0 1em 0;
+  color: var(--bara-accent);
+  letter-spacing: 0.05em;
+}
+
+/* Add responsive design for mobile */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 0.8em;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  header h3 {
+    font-size: 1em;
+  }
+}
 body {
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
