@@ -1,3 +1,21 @@
+// Add navigation active state handler
+document.addEventListener('DOMContentLoaded', () => {
+  // Get current page filename
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  
+  // Clear all active classes
+  document.querySelectorAll('nav a').forEach(link => {
+    link.classList.remove('active');
+  });
+  
+  // Set active class for current page
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.faq-question').forEach(button => {
