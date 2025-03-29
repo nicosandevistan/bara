@@ -4,17 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminalElement = document.querySelector('.loader-terminal');
 
   if (!hasSeenLoader) {
-    const funnyMessages = [
-      "$ probably doing something important...",
-      "$ contacting the central dogma...",
-      "$ pretending we know what we're doing...",
-      "$ performing science wizardry...",
-      "$ checking gene vibes...",
-      "$ bribing transcription machinery...",
-      "$ adjusting pipette volume...",
-      "$ threatening misbehaving base pairs...",
-      "$ autoclaving instant ramen..."
-    ];
+    const funnyMessages = ['$ contacting the central dogma...', '$ performing science wizardry...', '$ checking gene vibes...', '$ bribing transcription machinery...', '$ adjusting pipette volume...', '$ autoclaving instant ramen...', '$ PCR go brr...', '$ DNA pls work...', '$ E. coli???', '$ spin spin spin centrifuge!', '$ biosoup hot...', '$ oops all mutations', '$ should my centrifuge be shaking?', '$ add more buffer...', '$ ATP low...', '$ pipette filter compromised (rip)', '$ is my site cute?', '$ ts pmo bio', '$ ligase said no', '$ who let the cells out', "$ why's there no bands???", '$ agar is sus', '$ no shorts in the lab', '$ lab meeting 5pm friday', '$ can bleach be a buffer', '$ science science science'];
 
     const messageElement = document.getElementById('loading-message');
     const randomIndex = Math.floor(Math.random() * funnyMessages.length);
