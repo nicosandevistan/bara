@@ -1,37 +1,309 @@
-/* This already exists in your CSS, just make sure it stays */
-.faq-label {
-    display: none;
+/* Reset the CSS file to fix conflicting styles */
+:root {
+  --bara-primary: #00f7c3;
+  --bara-primary-hover: #05ffa1;
+  --bara-text: #b8fff3;
+  --bara-dark: #000000; /* Changed to true black */
+  --bara-dark-lighter: #000000; /* Also true black for background consistency */
+  --bara-accent: #c8fff4;
 }
 
-/* Update these styles for consistent cyan coloring */
+/* Base styles */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bara-dark);
+  color: var(--bara-text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--bara-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--bara-primary-hover);
+}
+
+/* Typography */
+h1, h2, h3, h4, nav a {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Special case for BARA title */
+header h1 {
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--bara-accent);
+  letter-spacing: 0.05em;
+}
+
+header h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.5em 0 1em 0;
+  color: var(--bara-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+p, ul, ol {
+  line-height: 1.8em;
+  margin-bottom: 1.5em;
+}
+
+/* Header - Single, consistent definition */
+header {
+  background-color: var(--bara-dark);
+  padding: 2em 0 1em 0;
+  text-align: center;
+  border-bottom: 1px solid var(--bara-primary);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--bara-text) !important;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: var(--bara-dark) !important;
+  background-color: var(--bara-primary);
+}
+
+/* Layout */
+main {
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+/* Intro section */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 1.5em 1em;
+  min-height: 50vh;
+  gap: 1em;
+}
+
+/* Button styles */
+.button-group {
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--bara-primary);
+  color: var(--bara-text);
+  padding: 0.75em 1.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: var(--bara-primary);
+  color: var(--bara-dark);
+}
+
+/* Terminal demo */
+.demo {
+  background-color: var(--bara-dark);
+  color: var(--bara-primary);
+  padding: 1.5em;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 720px;
+  margin: 2em auto;
+  font-family: monospace;
+  box-shadow: 0 0 12px var(--bara-primary);
+}
+
+.prompt {
+  color: var(--bara-primary-hover);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bara-dark);
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 4em;
+  border-top: 1px solid var(--bara-primary);
+}
+
+footer a {
+  color: var(--bara-primary);
+}
+
+footer a:hover {
+  color: var(--bara-primary-hover);
+}
+
+/* Custom sections */
+.how-bara-works, .modeling-methods {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 1.5em;
+  background-color: rgba(18, 18, 18, 0.3);
+  border-left: 4px solid var(--bara-primary-hover);
+  border-radius: 10px;
+}
+
+/* FAQ Section */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 800px;
+  margin: 2em auto;
+}
+
 .faq-card {
-    border: 1px solid var(--bara-primary); /* Uses your existing cyan variable */
-    border-radius: 12px;
-    padding: 1em;
-    position: relative;
-    background-color: rgba(17, 17, 17, 0.3);
-    transition: box-shadow 0.3s ease;
+  border: 1px solid var(--bara-primary);
+  border-radius: 12px;
+  padding: 1em;
+  position: relative;
+  background-color: rgba(17, 17, 17, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 
 .faq-card:hover {
-    box-shadow: 0 0 8px var(--bara-primary);
+  box-shadow: 0 0 8px var(--bara-primary);
 }
 
 .faq-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    color: var(--bara-primary); /* Cyan color for the question text */
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1em;
-    text-align: left;
-    cursor: pointer;
-    padding: 0.5em 0;
-    font-weight: bold;
-    position: relative;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--bara-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.5em 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.faq-toggle::after {
+  content: "▸";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.faq-card.open .faq-toggle::after {
+  transform: rotate(90deg);
 }
 
 .faq-answer {
-    color: var(--bara-text); /* Consistent text color */
-    /* Other existing properties */
+  max-height: 0 !important;
+  overflow: hidden;
+  padding: 0 !important;
+  opacity: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+}
+
+.faq-card.open .faq-answer {
+  max-height: 1000px !important;
+  padding: 1em !important;
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.intro > * {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.intro h2 { animation-delay: 0.1s; }
+.intro p { animation-delay: 0.3s; }
+.button-group { animation-delay: 0.5s; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 0.8em;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  header h3 {
+    font-size: 1em;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .intro {
+    min-height: 30vh;
+  }
 }
