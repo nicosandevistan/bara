@@ -412,3 +412,8 @@ nav a {
 ul, li, p {
     line-height: 1.8em;
 }
+
+
+.faq-container, .faq-question, .faq-answer {
+    font-family: 'IBM Plex Mono', monospace;
+}
