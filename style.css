@@ -180,3 +180,21 @@ header h1,
 header h3 {
     color: #d0fdf3;
 }
+
+
+.button {
+    color: #d0fdf3;
+}
+
+.button:hover {
+    background-color: #00f7c3;
+    color: #000;
+}
+
+/* Remove outer glow from .how-bara-works and .modeling-methods */
+.how-bara-works,
+.modeling-methods {
+    box-shadow: none;
+    border-left: 4px solid #05ffa1;
+    background: #121212;
+}
