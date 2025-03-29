@@ -189,7 +189,7 @@ footer a:hover {
   border-radius: 10px;
 }
 
-/* FAQ Section */
+/* FAQ Section - Updated to match the rest of the site */
 .faq-container {
   display: flex;
   flex-direction: column;
@@ -203,7 +203,7 @@ footer a:hover {
   border-radius: 12px;
   padding: 1em;
   position: relative;
-  background-color: rgba(17, 17, 17, 0.3);
+  background-color: var(--bara-dark); /* True black background instead of gray */
   transition: box-shadow 0.3s ease;
 }
 
@@ -215,7 +215,7 @@ footer a:hover {
   width: 100%;
   background: none;
   border: none;
-  color: var(--bara-primary);
+  color: var(--bara-primary); /* Cyan color for questions */
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1em;
   text-align: left;
@@ -230,6 +230,7 @@ footer a:hover {
   position: absolute;
   right: 10px;
   transition: transform 0.3s ease;
+  color: var(--bara-primary); /* Cyan color for the arrow */
 }
 
 .faq-card.open .faq-toggle::after {
@@ -242,6 +243,7 @@ footer a:hover {
   padding: 0 !important;
   opacity: 0;
   transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+  color: var(--bara-text); /* Match the main text color */
 }
 
 .faq-card.open .faq-answer {
