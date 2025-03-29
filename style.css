@@ -198,3 +198,49 @@ header h3 {
     border-left: 4px solid #05ffa1;
     background: #121212;
 }
+
+
+.accordion {
+    max-width: 800px;
+    margin: 2em auto;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #05ffa1;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    color: #00f7c3;
+    text-align: left;
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #111;
+}
+
+.accordion-header.active::before {
+    content: "▾ ";
+}
+
+.accordion-header::before {
+    content: "▸ ";
+    margin-right: 0.5em;
+}
+
+.accordion-body {
+    color: #d0fdf3;
+    background-color: #0a0a0a;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 0 1em;
+}
