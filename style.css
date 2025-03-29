@@ -417,3 +417,22 @@ ul, li, p {
 .faq-container, .faq-question, .faq-answer {
     font-family: 'IBM Plex Mono', monospace;
 }
+
+/* FINAL FIX — FAQ Cyan Color Consistency */
+.faq-card {
+    border: 1px solid #00f7c3;
+    background-color: #111;
+    box-shadow: none;
+}
+
+.faq-question,
+.faq-toggle {
+    color: #00f7c3;
+}
+
+.faq-answer {
+    color: #b8fff3;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
