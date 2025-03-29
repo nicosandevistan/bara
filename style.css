@@ -417,3 +417,45 @@ ul, li, p {
 .faq-container, .faq-question, .faq-answer {
     font-family: 'IBM Plex Mono', monospace;
 }
+
+
+.faq-question-box {
+    border: 2px solid #75fddc;
+    color: #75fddc;
+    box-shadow: 0 0 10px #75fddc;
+}
+
+
+/* Unify header styles across all pages */
+.site-header {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #c6fff5;
+}
+
+.site-subtitle {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #c6fff5;
+    margin: 0.3em auto 1em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #75fddc;
+}
+
+.navbar a {
+    color: #75fddc;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
