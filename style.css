@@ -311,3 +311,17 @@ header h3 {
     box-shadow: none;
     padding: 0.5em 0;
 }
+
+
+/* Fix text peeking bug */
+.faq-answer {
+    overflow: hidden;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Optional: improve responsiveness by smoothing overflow hiding */
+.faq-answer::-webkit-scrollbar {
+    display: none;
+}
