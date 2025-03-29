@@ -396,3 +396,9 @@ nav a {
 nav a:hover {
     color: #9effd6;
 }
+
+
+/* Set all base text to BARA cyan */
+body, p, h1, h2, h3, h4, h5, h6, li, a, div, span, button, input, textarea {
+    color: #b8fff3;
+}
