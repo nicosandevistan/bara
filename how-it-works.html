@@ -1,92 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>BARA | How It Works</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-    <header>
-        <h1>BARA</h1>
-        <h3>Biological Automated Recombinase Architect</h3>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="how-it-works.html" class="active">How It Works</a></li>
-                <li><a href="progress.html">Progress</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-</ul>
-        </nav>
-    
+<!DOCTYPE html><html><head><link rel='stylesheet' href='style.css'></head><body>
+<header>
+  <h1>BARA</h1>
+  <h3>Biological Automated Recombinase Architect</h3>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="home-link">Home</a></li>
+      <li><a href="how-it-works.html" class="how-link active">How It Works</a></li>
+      <li><a href="progress.html" class="progress-link">Progress</a></li>
+      <li><a href="about.html" class="about-link">About</a></li>
+      <li><a href="faq.html" class="faq-link">FAQ</a></li>
+      <li><a href="circuit-designer.html" class="designer-link">Circuit Designer</a></li>
+    </ul>
+  </nav>
 </header>
-    <main class="fade-in slide-up">
-        <section>
-            <h2>How It Works</h2>
-
-            <ol>
-                <li><strong>Collect Data:</strong> Extract genetic circuit data from iGEM and SynBioHub.</li>
-                <li><strong>Analyze Design:</strong> Feed design features into an AI model trained to recognize function.</li>
-                <li><strong>Predict Behavior:</strong> Receive a functional prediction of the genetic circuit.</li>
-            </ol>
-        </section>
-        <section>
-            <h3>Modeling Methods</h3>
-            <p>
-                Our model architecture uses ensemble learning techniques—like random forests and gradient-boosted trees—to identify relationships between genetic components and their resulting behaviors in synthetic circuits. These models are trained on curated datasets from iGEM and SynBioHub. We're currently exploring multi-layer prediction methods and integrating symbolic logic into neural networks to better model complex, hierarchical designs.
-        </section>
-        <section>
-            <h3>Prompt-Based Design Preview</h3>
-            <p>Try entering a prompt like:</p>
-            <code>"Design a circuit that activates GFP only when arabinose is present and IPTG is absent."</code>
-            <p class="preview-output">Output: A NOT-AND gate activating GFP with araC and lacI regulatory logic (Preview Only).</p>
-        </section>
-    
-<section class="how-bara-works">
-    <h2>How BARA Works</h2>
-    <p>
-        BARA analyzes genetic circuits using a combination of machine learning and curated biological datasets from sources like the iGEM Registry and SynBioHub. 
-        By transforming circuit designs into feature representations, the system will learn to classify and predict their functions using tools like ensemble models (Random Forests, XGBoost) and deep learning architectures.
-    </p>
-    <p>
-        But our ultimate goal goes further: we aim to create a generative system that can <strong>design entirely new genetic circuits</strong> based on desired behaviors. 
-        This means reversing the process — using insights gained from analysis to enable synthetic biology tools that recommend novel circuits to achieve specific logic or output.
-    </p>
-    <p>
-        This system could eventually empower synthetic biologists to go from "What do I want this cell to do?" to "Here's how to build it" — automatically.
-    </p>
-</section>
-
-<section class="modeling-methods">
-    <h2>Modeling Methods</h2>
-    <p>
-        BARA begins by parsing genetic circuits from open databases like the iGEM Registry and SynBioHub.
-        Each circuit is broken down into standardized biological parts (e.g., promoters, RBS, CDS, terminators), 
-        which are then converted into computational feature sets.
-    </p>
-    <p>
-        Our early modeling pipeline will leverage interpretable machine learning tools like 
-        <strong>Random Forests</strong> and <strong>XGBoost</strong> to classify circuit behavior based on structure.
-        These provide a foundation for understanding which circuit components influence specific functions.
-    </p>
-    <p>
-        As we scale, we plan to adopt <strong>Graph Neural Networks (GNNs)</strong> to represent circuits as directed graphs 
-        and capture more complex interactions between genetic elements. We are also exploring 
-        <strong>neuro-symbolic models</strong> to blend logical gate inference with deep learning.
-    </p>
-    <p>
-        Our long-term vision is to invert this pipeline — using learned models to <strong>generate circuits from desired behaviors</strong>, 
-        enabling fully AI-assisted synthetic biology design.
-    </p>
-</section>
-</main>
-
-    <footer>
-        <p>Created by Nicolas Rojas Taborda | Contact: <a href="mailto:barainitiative@gmail.com">barainitiative@gmail.com</a></p>
-    </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<main><p>This is the How It Works page.</p></main></body></html>

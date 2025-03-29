@@ -1,461 +1,49 @@
 
-body {
-    font-family: 'IBM Plex Mono', monospace;
-    margin: 0;
-    padding: 0;
-    background-color: #0a0a0a;
-    color: #d0fdf3;
-}
-
 header {
-    background-color: #111;
-    color: #00f7c3;
-    padding: 1em;
-    text-align: center;
-    box-shadow: 0 0 8px #00f7c3;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-}
-
-nav a {
-    color: #00f7c3;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover, nav a.active {
-    color: #05ffa1;
-}
-
-main {
-    padding: 2em;
-}
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2em;
-    padding: 1.5em 1em;
-    min-height: 50vh;
-    gap: 1em;
-}
-
-.button-group {
-    margin-top: 1em;
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.button {
-    background-color: transparent;
-    border: 1px solid #00f7c3;
-    color: #00f7c3;
-    padding: 0.75em 1.5em;
-    margin: 0.5em;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #00f7c3;
-    color: #000;
-}
-
-.demo {
-    background-color: #000;
-    color: #00f7c3;
-    padding: 1em;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 720px;
-    margin: 2em auto;
-    font-family: monospace;
-    box-shadow: 0 0 12px #00f7c3;
-}
-
-.prompt {
-    color: #05ffa1;
-    font-weight: bold;
-}
-
-footer {
-    background-color: #111;
-    color: #00f7c3;
-    text-align: center;
-    padding: 1em;
-    margin-top: 4em;
-    box-shadow: 0 0 6px #00f7c3;
-}
-
-h1, h2, h3, nav a {
-    font-family: 'IBM Plex Mono', monospace;
-    text-transform: uppercase;
-}
-
-.faq-question {
-    background-color: #101010;
-    color: #00f7c3;
-}
-
-.faq-question:hover {
-    background-color: #1a1a1a;
-}
-
-.faq-answer {
-    border-left: 3px solid #05ffa1;
-    color: #d0fdf3;
-    box-shadow: inset 0 0 5px #00f7c3;
-}
-
-.faq-item {
-    box-shadow: 0 0 8px #00f7c3;
-}
-
-.how-bara-works, .modeling-methods {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 1.5em;
-    background: #121212;
-    border-left: 4px solid #05ffa1;
-    box-shadow: 0 0 8px #05ffa1;
-    border-radius: 10px;
-    color: #d0fdf3;
-}
-
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.intro > * {
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
-}
-
-.intro h2 {
-    animation-delay: 0.1s;
-}
-
-.intro p {
-    animation-delay: 0.3s;
-}
-
-.button-group {
-    animation-delay: 0.5s;
-}
-
-
-footer a {
-    color: #00f7c3;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #05ffa1;
-}
-
-
-header h1,
-header h3 {
-    color: #d0fdf3;
-}
-
-
-.button {
-    color: #d0fdf3;
-}
-
-.button:hover {
-    background-color: #00f7c3;
-    color: #000;
-}
-
-/* Remove outer glow from .how-bara-works and .modeling-methods */
-.how-bara-works,
-.modeling-methods {
-    box-shadow: none;
-    border-left: 4px solid #05ffa1;
-    background: #121212;
-}
-
-
-.accordion {
-    max-width: 800px;
-    margin: 2em auto;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-.accordion-item {
-    border-bottom: 1px solid #05ffa1;
-}
-
-.accordion-header {
-    background: none;
-    border: none;
-    color: #00f7c3;
-    text-align: left;
-    width: 100%;
-    padding: 1em;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-    background-color: #111;
-}
-
-.accordion-header.active::before {
-    content: "▾ ";
-}
-
-.accordion-header::before {
-    content: "▸ ";
-    margin-right: 0.5em;
-}
-
-.accordion-body {
-    color: #d0fdf3;
-    background-color: #0a0a0a;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    padding: 0 1em;
-}
-
-
-.faq-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    max-width: 800px;
-    margin: 2em auto;
-}
-
-.faq-card {
-    border: 1px solid #05ffa1;
-    border-radius: 12px;
-    padding: 1em;
-    position: relative;
-    background-color: #111;
-    transition: box-shadow 0.3s ease;
-}
-
-.faq-card:hover {
-    box-shadow: 0 0 8px #00f7c3;
-}
-
-.faq-label {
-    position: absolute;
-    top: -0.75em;
-    left: 1em;
-    background-color: #0a0a0a;
-    padding: 0 0.5em;
-    color: #05ffa1;
-    font-size: 0.8em;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-.faq-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    color: #00f7c3;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1em;
-    text-align: left;
-    cursor: pointer;
-    padding: 0.5em 0;
-    font-weight: bold;
-}
-
-.faq-answer {
-    color: #d0fdf3;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    margin-top: 0.5em;
-}
-
-
-/* Remove BARA label */
-.faq-label {
-    display: none;
-}
-
-/* Remove glow on answer */
-.faq-answer {
-    background: none;
-    box-shadow: none;
-    padding: 0.5em 0;
-}
-
-
-/* Fix text peeking bug */
-.faq-answer {
-    overflow: hidden;
-    padding-left: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-/* Optional: improve responsiveness by smoothing overflow hiding */
-.faq-answer::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Final fix for text peeking through in closed FAQ */
-.faq-answer {
-    max-height: 0 !important;
-    overflow: hidden;
-    padding: 0 !important;
-    opacity: 0;
-    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
-}
-
-.faq-card.open .faq-answer {
-    max-height: 1000px !important;
-    padding: 1em !important;
-    opacity: 1;
-}
-
-
-.fade-in {
-    animation: fadeIn 1s ease-out forwards;
-    opacity: 0;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Consistent header layout and spacing */
-header {
-    padding: 2em 0 1em 0;
-    text-align: center;
-    border-bottom: 2px solid #2ee6b6;
-    box-shadow: 0 4px 12px rgba(0, 255, 170, 0.1);
+  text-align: center;
+  padding: 2em 0 1em 0;
+  border-bottom: 2px solid #2ee6b6;
+  box-shadow: 0 4px 12px rgba(0, 255, 170, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #c8fff4;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.5em;
+  margin: 0;
+  color: #c6fff5;
 }
 
 header h3 {
-    font-size: 1.25em;
-    font-weight: 600;
-    margin: 0.5em 0 1em 0;
-    color: #c8fff4;
-    letter-spacing: 0.05em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.3em 0 1em;
+  color: #c6fff5;
+  letter-spacing: 0.05em;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    margin-top: 1em;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
 }
 
 nav a {
-    text-decoration: none;
-    color: #55ffc2;
-    font-weight: bold;
-    font-size: 1em;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: #75fddc;
 }
 
 nav a:hover {
-    color: #9effd6;
+  color: #9effd6;
 }
 
-
-/* Set all base text to BARA cyan */
-body, p, h1, h2, h3, h4, h5, h6, li, a, div, span, button, input, textarea {
-    color: #b8fff3;
-}
-
-
-nav a {
-    color: #b8fff3 !important;
-}
-
-
-ul, li, p {
-    line-height: 1.8em;
-}
-
-
-.faq-container, .faq-question, .faq-answer {
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-
-.faq-question-box {
-    border: 2px solid #75fddc;
-    color: #75fddc;
-    box-shadow: 0 0 10px #75fddc;
-}
-
-
-/* Unify header styles across all pages */
-.site-header {
-    text-align: center;
-    margin-top: 40px;
-    font-family: 'IBM Plex Mono', monospace;
-    color: #c6fff5;
-}
-
-.site-subtitle {
-    font-size: 1.7em;
-    font-weight: 600;
-    color: #c6fff5;
-    margin: 0.3em auto 1em;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    color: #75fddc;
-}
-
-.navbar a {
-    color: #75fddc;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
+nav a.active {
+  color: #ffffff;
+  text-decoration: underline;
 }
