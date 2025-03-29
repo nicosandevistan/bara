@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hasSeenLoader = sessionStorage.getItem('seenLoader');
   const loaderElement = document.querySelector('.loader-wrapper');
+  const terminalElement = document.querySelector('.loader-terminal');
 
   if (!hasSeenLoader) {
     const funnyMessages = [
       "$ probably doing something important...",
       "$ contacting the central dogma...",
-      "$ pretending we know what we’re doing...",
+      "$ pretending we know what we're doing...",
       "$ performing science wizardry...",
       "$ checking gene vibes...",
       "$ bribing transcription machinery...",
@@ -17,7 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const messageElement = document.getElementById('loading-message');
     const randomIndex = Math.floor(Math.random() * funnyMessages.length);
-    messageElement.innerHTML = funnyMessages[randomIndex];
+    const selectedMessage = funnyMessages[randomIndex];
+
+    messageElement.innerHTML = selectedMessage;
+
+    setTimeout(() => {
+      const textWidth = messageElement.offsetWidth + 40;
+      terminalElement.style.width = Math.max(300, textWidth) + 'px';
+    }, 50);
 
     setTimeout(() => {
       if (loaderElement) {
@@ -34,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       sessionStorage.setItem('seenLoader', 'true');
     }, 3500);
-
   } else {
     if (loaderElement) {
       loaderElement.classList.add('loader-hidden');
