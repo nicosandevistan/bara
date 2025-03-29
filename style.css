@@ -353,3 +353,46 @@ header h3 {
         opacity: 1;
     }
 }
+
+
+/* Consistent header layout and spacing */
+header {
+    padding: 2em 0 1em 0;
+    text-align: center;
+    border-bottom: 2px solid #2ee6b6;
+    box-shadow: 0 4px 12px rgba(0, 255, 170, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #c8fff4;
+}
+
+header h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0.5em 0 1em 0;
+    color: #c8fff4;
+    letter-spacing: 0.05em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #55ffc2;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+nav a:hover {
+    color: #9effd6;
+}
