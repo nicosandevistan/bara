@@ -28,29 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Page transition effect
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (link.getAttribute('href') !== window.location.pathname.split("/").pop()) {
-        e.preventDefault();
-        const href = this.getAttribute('href');
-        const transition = document.querySelector('.page-transition');
-        transition.classList.add('active');
-        setTimeout(() => {
-          window.location.href = href;
-        }, 500);
-      }
+  // FAQ Toggle Logic
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.faq-card');
+      card.classList.toggle('open');
     });
   });
-});
-
-// Handle browser back button
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    const transition = document.querySelector('.page-transition');
-    transition.classList.add('exit');
-    setTimeout(() => {
-      transition.classList.remove('active', 'exit');
-    }, 500);
-  }
 });
