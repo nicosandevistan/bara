@@ -546,3 +546,9 @@ section h2 {
   opacity: 1;
   transform: scale(1.5);
 }
+/* Loader hidden fallback */
+.loader-hidden {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
