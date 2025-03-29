@@ -23,3 +23,22 @@ document.querySelectorAll('.accordion-header').forEach(button => {
         }
     });
 });
+
+
+document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.parentElement;
+        const answer = card.querySelector('.faq-answer');
+        const open = card.classList.contains('open');
+
+        document.querySelectorAll('.faq-card').forEach(c => {
+            c.classList.remove('open');
+            c.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!open) {
+            card.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
